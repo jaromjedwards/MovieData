@@ -11,7 +11,7 @@ curl http://localhost:3000/movies/65b03afed45be0bf43ed864e
 curl -X POST http://localhost:3000/movies \
 -H "Content-Type: application/json" \
 -d '{
-    "movieTitle": "Harry Potter",
+    "movieTitle": "Jarom",
     "movieDirector": "Mike Johnson",
     "leadActor": "Daniel Radcliff",
     "supportingActor": "Emma Watson",
@@ -22,7 +22,7 @@ curl -X POST http://localhost:3000/movies \
 
 ###
 
-curl -X PUT http://localhost:3000/movies/65b03afed45be0bf43ed864e \
+curl -X PUT http://localhost:3000/movies/65b43ec3a3ad51b854cb858b \
 -H "Content-Type: application/json" \
 -d '{
     "movieTitle": "HI Title",
@@ -36,4 +36,4 @@ curl -X PUT http://localhost:3000/movies/65b03afed45be0bf43ed864e \
 
 ###
 
-curl -X DELETE http://localhost:3000/movies/65b17d6540d9808e01fc228b
+curl -X DELETE http://localhost:3000/movies/65b43ec3a3ad51b854cb858b
