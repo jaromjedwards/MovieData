@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongodb = require('./data/database');
+const mongodb = require('./data/database')
 const app = express();
 
 const port = 3000;
@@ -14,16 +14,14 @@ app.use((req, res, next) => {
     );
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
-});
+})
 
 app.use('/', require('./routes'));
 
-mongodb.initDb((err, database) => {
+mongodb.initDb((err) => {
     if (err) {
         console.log('Error initializing database:', err);
-        process.exit(1); // Exit the application if the database initialization fails
     } else {
-        console.log('Database initialized successfully');
         app.listen(process.env.PORT || port, () => {
             console.log('Web Server is listening at port ' + (process.env.PORT || port));
         });

@@ -17,10 +17,4 @@ const doc = {
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];
 
-// Validate the required information for Swagger documentation
-if (!doc.info.title || !doc.info.description || !doc.info.contact || !doc.host || !doc.schemes) {
-    console.error('Error: Insufficient information for Swagger documentation. Please provide title, description, contact, host, and schemes.');
-    process.exit(1); // Exit the application if there's insufficient information
-}
-
 swaggerAutogen(outputFile, endpointsFiles, doc);

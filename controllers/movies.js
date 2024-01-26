@@ -6,7 +6,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
     const result = await mongodb.getDatabase().db().collection('Movies').find().toArray();
     res.setHeader('Content-Type', 'application/json');
-    res.status(204).json(result);
+    res.status(200).json(result);
 }
 
 const getSingle = async (req, res) => {
@@ -14,7 +14,7 @@ const getSingle = async (req, res) => {
     const db = mongodb.getDatabase();
     const movie = await db.db().collection('Movies').findOne({_id: movieId});
     res.setHeader('Content-Type', 'application/json');
-    res.status(204).json(movie);
+    res.status(200).json(movie);
 }
 
 const createMovie = async (req, res) => {
