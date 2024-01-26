@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
     try {
         const result = await mongodb.getDatabase().db().collection('Movies').find().toArray();
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(result);
+        res.status(204).json(result);
     } catch (error) {
         console.error('Error fetching movies:', error);
         res.status(500).json('Internal server error');
@@ -20,7 +20,7 @@ const getSingle = async (req, res) => {
     try {
         const movie = await db.db().collection('Movies').findOne({_id: movieId});
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(movie);
+        res.status(204).json(movie);
     } catch (error) {
         console.error('Error fetching single movie:', error);
         res.status(500).json('Internal server error');
