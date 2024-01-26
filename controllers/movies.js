@@ -69,7 +69,7 @@ const updateMovie = async (req, res) => {
         if (response.modifiedCount > 0) {
             res.status(204).send();
         } else {
-            res.status(404).json('No movie found or updated');
+            res.status(400).json('No movie found or updated');
         }
     } catch (error) {
         console.error('Error updating movie:', error);
@@ -85,7 +85,7 @@ const deleteMovie = async (req, res) => {
         if (response.deletedCount > 0) {
             res.status(204).send();
         } else {
-            res.status(404).json('No movie found or deleted');
+            res.status(400).json('No movie found or deleted');
         }
     } catch (error) {
         console.error('Error deleting movie:', error);
