@@ -11,7 +11,14 @@ const initDb = (callback) => {
         console.log('Db is already initialized');
         return callback(null, database);
     }
-    MongoClient.connect(process.env.MONGODB_URI)
+
+    // Data validation for MongoDB URI
+    const mongoUri = process.env.MONGODB_URI;
+    if (!mongoUri) {
+        return callback('MongoDB URI is missing in the environment variables');
+    }
+
+    MongoClient.connect(mongoUri)
         .then((client) => {
             database = client;
             callback(null, database);
