@@ -21,7 +21,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://https://movies-lqqw.onrender.com/',
+  baseURL: 'https://movies-lqqw.onrender.com/',
   clientID: 'uSy0d3dIStjFQ5keOrxu7LFaoQE5PsrO',
   issuerBaseURL: 'https://dev-0m1ga76jspjnedov.us.auth0.com'
 };
