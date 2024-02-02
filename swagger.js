@@ -1,5 +1,3 @@
-// swagger.js
-
 const swaggerAutogen = require('swagger-autogen');
 
 const doc = {
@@ -13,7 +11,7 @@ const doc = {
         }
     },
     host: 'localhost:3000',
-    schemes: ['http']
+    schemes: ['https', 'http']
 }
 
 const outputFile = './swagger.json';
