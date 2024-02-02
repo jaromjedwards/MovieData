@@ -10,7 +10,7 @@
     },
     "version": "1.0.0"
   },
-  "host": "https://movies-lqqw.onrender.com/",
+  "host": "://movies-lqqw.onrender.com/login",
   "basePath": "/",
   "schemes": [
     "http"
