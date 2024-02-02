@@ -11,7 +11,10 @@ const config = {
   secret: 'a long, randomly-generated string stored in env',
   baseURL: 'http://localhost:3000',
   clientID: 'uSy0d3dIStjFQ5keOrxu7LFaoQE5PsrO',
-  issuerBaseURL: 'https://dev-0m1ga76jspjnedov.us.auth0.com'
+  issuerBaseURL: 'https://dev-0m1ga76jspjnedov.us.auth0.com',
+  routes: {
+    callback: "/callback"
+  }
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
