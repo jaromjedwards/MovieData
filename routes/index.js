@@ -1,7 +1,6 @@
 const router = require('express').Router();
 
 router.use('/', require('./swagger'));
-router.use("/instructors", require("./instructors"));
 const movies = require('./movies');
 
 const { auth, requiresAuth } = require('express-openid-connect');
